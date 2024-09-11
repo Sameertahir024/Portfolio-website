@@ -121,8 +121,8 @@ export default function MarqueeDemo() {
             What my client say about me!
           </h1>
           <h1 className="text-center text-[16px] opacity-50">
-            Don't just take my words for it see what <br />my clients say about
-            my work.
+            Don&#39;t just take my words for it see what <br />
+            my clients say about my work.
           </h1>
         </div>
 
