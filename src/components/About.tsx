@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import image1 from "../assets/ai-startup-landing-page.png";
 import image2 from "../assets/dark-saas-landing-page.png";
@@ -54,7 +55,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className=" mt-11 bg-[#080202] rounded-[7px] mx-7  sticky top-16  border border-white   ">
+      <div className=" mt-11 bg-[#080202] rounded-[7px] mx-7  sticky top-6   border border-white   ">
         <div className="grid md:grid-cols-2">
           <div className="text-white flex flex-col items-start pl-16 justify-center ">
             <div className="space-y-3">
@@ -98,7 +99,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className=" mt-11 bg-[#080202] rounded-[7px] mx-7   sticky top-20 border border-white  shadow-2xl ">
+      <div className=" mt-11 bg-[#080202] rounded-[7px] mx-7   sticky top-6  border border-white  shadow-2xl ">
         <div className="grid  md:grid-cols-2">
           <div className="text-white flex flex-col items-start pl-16 justify-center ">
             <div className="space-y-3">

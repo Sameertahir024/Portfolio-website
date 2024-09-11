@@ -50,7 +50,7 @@ const Navbar: React.FC<MyComponentProps> = ({ children }) => {
         <div>
           <AnimatePresence>
             {show && (
-              <motion.ul className="hidden lg:flex  items-center text-base gap-10 uppercase font-thin cursor-pointer select-none">
+              <motion.ul className="hidden lg:flex  items-center text-base gap-10 uppercase  cursor-pointer select-none">
                 <motion.li
                   initial={{
                     opacity: 0,

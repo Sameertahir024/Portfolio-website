@@ -12,7 +12,7 @@ const Footer = () => {
     return () => clearInterval(intervalId);
   }, []);
   return (
-    <div className="">
+    <div className="container-size  ">
       <div className="md:flex space-y-3  flex-wrap items-center justify-between mt-32 mb-3 border-t-2 border-black border-opacity-60">
         <div className="w-full md:w-1/2 space-y-2  ">
           <h1 className="capitalize mt-3 opacity-30">local time</h1>

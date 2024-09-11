@@ -88,9 +88,9 @@ const ReviewCard = ({
   return (
     <figure
       className={cn(
-        "relative w-96 cursor-pointer overflow-hidden rounded-xl border p-4",
+        "relative h-60 w-48 cursor-pointer overflow-hidden rounded-xl border p-4",
         // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        "border-gray-950/[.1] bg-white ",
         // dark styles
         "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
       )}
@@ -98,45 +98,51 @@ const ReviewCard = ({
       <div className="flex flex-row items-center gap-2">
         <img className="rounded-full" width="32" height="32" alt="" src={img} />
         <div className="flex flex-col">
-          <figcaption className="text-base font-bold  dark:text-white">
+          <figcaption className="text-sm font-medium dark:text-white">
             {name}
           </figcaption>
-          <p className="text-xs font-medium dark:text-white/40 opacity-45">
+          <p className="text-xs opacity-50 font-medium dark:text-white/40">
             {username}
           </p>
         </div>
       </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
+      <blockquote className="mt-2 text-[13px]">{body}</blockquote>
     </figure>
   );
 };
 
-export function MarqueeDemo() {
+export default function MarqueeDemo() {
   return (
-    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden ">
-      <div className="flex my-16 flex-col items-center gap-2">
-        <h1 className="uppercase text-xs   ">Happy clients</h1>
-        <h1 className=" text-3xl font-bold playfair-display ">
-          What my client say about me!
-        </h1>
-        <h1 className="text-center opacity-50">
-          Lorem ipsum dolor sit amet consectetur, <br /> adipisicing elit. Quis
-          laborum
-        </h1>
-      </div>
-      <Marquee pauseOnHover className="[--duration:20s]">
-        {firstRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:20s]">
-        {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
+    <div>
+      <div className="h-screen  bg-[#080202] relative flex  mx-7 rounded-[7px]  flex-row items-center justify-center overflow-hidden  border  md:shadow-xl">
+        <div className=" text-white flex my-16 flex-col items-center gap-4 pr-40 ">
+          <h1 className="uppercase text-xs ">Happy clients</h1>
+          <h1 className=" text-4xl font-bold playfair-display ">
+            What my client say about me!
+          </h1>
+          <h1 className="text-center text-[16px] opacity-50">
+            Don't just take my words for it see what <br />my clients say about
+            my work.
+          </h1>
+        </div>
 
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
+        <div className="rotate-12">
+          <Marquee pauseOnHover vertical className="[--duration:20s]">
+            {firstRow.map((review) => (
+              <ReviewCard key={review.username} {...review} />
+            ))}
+          </Marquee>
+        </div>
+        <div className="rotate-12">
+          <Marquee reverse pauseOnHover vertical className="[--duration:20s]">
+            {secondRow.map((review) => (
+              <ReviewCard key={review.username} {...review} />
+            ))}
+          </Marquee>
+        </div>
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-black "></div>
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black "></div>
+      </div>
     </div>
   );
 }
