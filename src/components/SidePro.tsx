@@ -11,9 +11,15 @@ import image7 from "../assets/folder/food-mern.png";
 import image8 from "../assets/folder/dashboard.png";
 import ShinyButton from "./magicui/shiny-button";
 import SparklesText from "./magicui/sparkles-text";
-
 export default function SidePro() {
-  const Menu = [
+  interface MenuItem {
+    id: number;
+    name: string;
+    Image?: StaticImageData;
+    link?: string; // Assuming you're importing an image as `image8`
+    description: string;
+  }
+  const Menu: MenuItem[] = [
     {
       id: 1,
       name: "mern admin dashboard",
@@ -28,13 +34,6 @@ export default function SidePro() {
       description:
         " (Reactjs , Tailwindcss , Nodejs , MongoDb , Express and many other libraries...)",
     },
-    // {
-    //   id: 1,
-    //   name: "react quiz app",
-    //   Image: image2,
-    //   description:
-    //     " (Reactjs , Tailwindcss , and many other Packages and libraries...)",
-    // },
 
     {
       id: 1,
@@ -97,24 +96,24 @@ export default function SidePro() {
           " container-size my-16 grid md:grid-cols-4  gap-20  lg:flex-row"
         }
       >
-        {Menu.map((manu, index) => {
+        {Menu.map((menu: MenuItem, index) => {
           return (
             <MagicCard
               key={index}
               className="cursor-pointer p-2 flex flex-col items-center justify-center shadow-2xl"
             >
               <Image
-                src={manu.Image}
+                src={menu.Image}
                 alt=""
                 sizes=""
                 className=" rounded-lg py-1"
               />
               <div className="space-y-2">
                 <h1 className="text-xs uppercase font-bold playfair-display">
-                  {manu.name}
+                  {menu.name}
                 </h1>
                 <hr />
-                <h1 className="text-xs">{manu.description.slice(0, 70)}</h1>
+                <h1 className="text-xs">{menu.description.slice(0, 70)}</h1>
                 <ShinyButton
                   className="w-full rounded-[7px] bg-black text-white border-2"
                   text="Live Preview"
