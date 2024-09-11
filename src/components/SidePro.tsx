@@ -16,7 +16,7 @@ export default function SidePro() {
     id: number;
     name: string;
     Image?: StaticImageData;
-    link?: string; // Assuming you're importing an image as `image8`
+    link?: string;
     description: string;
   }
   const Menu: MenuItem[] = [
