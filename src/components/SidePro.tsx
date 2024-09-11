@@ -87,7 +87,7 @@ export default function SidePro() {
   return (
     <div>
       <div className="container-size space-y-2 mt-8">
-        <SparklesText text="Projects " colors={"#FE8FB5"} />
+        <SparklesText text="Projects " />
         <h1 className="opacity-50">
           NOTE : Some of projects may note have production URL
         </h1>

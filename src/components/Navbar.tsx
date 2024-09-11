@@ -3,11 +3,7 @@ import React, { useState } from "react";
 import { useScroll, motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
-// import Project from "./../Project/Project";
-interface MyComponentProps {
-  children: React.ReactNode;
-}
-const Navbar: React.FC<MyComponentProps> = ({ children }) => {
+const Navbar = () => {
   const [show, setShow] = useState(false);
   const [Mobile, setMobile] = useState(false);
   const { scrollYProgress } = useScroll();
@@ -304,7 +300,6 @@ const Navbar: React.FC<MyComponentProps> = ({ children }) => {
           )}
         </AnimatePresence>
       </div>
-      <div>{children}</div>
     </div>
   );
 };

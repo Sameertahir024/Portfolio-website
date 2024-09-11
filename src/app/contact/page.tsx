@@ -6,12 +6,12 @@ const page = () => {
     <div>
       <div className=" container-size  ">
         <h1 className="select-none uppercase font-bold my-7">
-          <SparklesText text="Contact me " colors={"#FE8FB5"} />
+          <SparklesText text="Contact me "  />
         </h1>
 
         <div className="space-y-5 mt-10">
           <div className="border-b-2">
-            <label htmlFor="myInput">WHAT'S YOUR NAME?</label>
+            <label htmlFor="myInput">WHAT&#39;S YOUR NAME?</label>
             <input
               type="text"
               placeholder="SAMEER TAHIR...* "
@@ -19,7 +19,7 @@ const page = () => {
             />
           </div>
           <div className="border-b-2">
-            <label htmlFor="myInput">WHAT'S YOUR EMAIL?</label>
+            <label htmlFor="myInput">WHAT&#39;S YOUR EMAIL?</label>
             <input
               type="text"
               placeholder="sameertahir@gmail.com* "
@@ -31,8 +31,8 @@ const page = () => {
             <textarea
               name=""
               id=""
-              cols="30"
-              rows="10"
+              cols={30}
+              rows={10}
               className="w-full h-28 outline-none "
               placeholder="HELLO , can you help me*"
             ></textarea>
@@ -44,7 +44,6 @@ const page = () => {
           </div>
         </div>
       </div>
-     
     </div>
   );
 };
