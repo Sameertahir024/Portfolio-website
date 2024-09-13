@@ -1,5 +1,5 @@
 import { MagicCard } from "@/components/magicui/magic-card";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import image1 from "../assets/folder/edit.png";
 import image9 from "../assets/folder/form.png";
 import image2 from "../assets/folder/edit2.png";
@@ -15,7 +15,7 @@ export default function SidePro() {
   interface MenuItem {
     id: number;
     name: string;
-    Image?: StaticImageData;
+    Image?: StaticImageData | string;
     link?: string;
     description: string;
   }
@@ -103,7 +103,7 @@ export default function SidePro() {
               className="cursor-pointer p-2 flex flex-col items-center justify-center shadow-2xl"
             >
               <Image
-                src={menu.Image}
+                src={menu.Image || "default"}
                 alt=""
                 sizes=""
                 className=" rounded-lg py-1"
